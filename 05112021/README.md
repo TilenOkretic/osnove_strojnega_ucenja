@@ -7,11 +7,15 @@
         - damo neko "default" vrednost ki se nastavi tam kjer drugace vrednosti ne bi bilo
     * pavilnega odgovora ni vse odvisi od stolpca
 
+---
+
 ## KSP date format 
                           days_starting_from_Jan_1 - 0.5
     * KSP Date = YYYY + ----------------------------------
                               365 + 1_if_leap_year
-     
+
+---
+
 ## Nominal -> Numeric
     * Nominal: podatki, ki niso v stevilski obliki
     * Kako narediti pretvorbo:
@@ -22,4 +26,14 @@
         - More than two values:
             - Ordered -> preserve the order
             - Unordered -> every value gets it's own 0-1 attribute
+        - [tukaj se neki manka poglej na slajde]
+
+---
+
+## Numeric -> Nominal
+    * discretization / binning
+    * zdruzevanje podatkov
+    * pristopi:
+        - dolocimo intervale in zdruzimo vrednosti, ki so znotraj intervala
+        - dolocimo intervale in prestejemo koliko vrednosti pade znotraj intervala
         -  
