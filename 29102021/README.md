@@ -1,15 +1,15 @@
 # Descriptive Statistics
-    * neka statisticna obdelava podatkov ki jo naredimo da izvemo nekaj o nasih podatkih
-    * Obicajno prva rec ki jo naredimo
-    * Dve veji:
-        - central tendency
-            * mediana
-            * povprecje
-            * srednje vrednosti
-            * modus / mode (frekvenca ponovite podatkov)
-        - variability
-    * Po principu KISS (Keep It Simple, Stupid)
-    * Min, Max, Avg, Median and Mode
+* neka statisticna obdelava podatkov ki jo naredimo da izvemo nekaj o nasih podatkih
+* Obicajno prva rec ki jo naredimo
+* Dve veji:
+    - central tendency
+        * mediana
+        * povprecje
+        * srednje vrednosti
+        * modus / mode (frekvenca ponovite podatkov)
+    - variability
+* Po principu KISS (Keep It Simple, Stupid)
+* Min, Max, Avg, Median and Mode
 
 ## Percentile
     * Predstavlja stevilko od katere je pred njo tocno tisti procent stevil manjsih
