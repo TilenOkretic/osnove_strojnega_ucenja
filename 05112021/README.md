@@ -51,7 +51,7 @@
 
 ---
 
-## Outliers
+## Outliers (osamelec)
 * Podatki znotraj data set-a, ki so mogoce ne pravilni
 * Manual inspection:
     - Box Plot
@@ -64,10 +64,17 @@
 * calcuate IQR - inter quartile range
     - IQR=q3 + q1
 * treat as outliers all examples with attribute values that are:
-    - LOWER than q1 - 1.5 x IQR
-    - GREATER than q3 + 1.5 x IQR
+    - **LOWER** than q1 - 1.5 x IQR
+    - **GREATER** than q3 + 1.5 x IQR
 * example:
     - q1  = QUARTILE(*first_element*: *last_element*, 1)
     - q3  = QUARTILE(*first_element*: *last_element*, 3)
     - IQR = q3 + q1
     - 
+
+---
+
+## Field reduction
+* ne se bat brisat podatkov
+* brisanje ne relevantnih podatkov
+
