@@ -1,0 +1,115 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.FilteredClassifier -F "weka.filters.supervised.attribute.Discretize -R first-last -precision 6" -S 1 -W weka.classifiers.rules.Prism
+Relation:     iris
+Instances:    150
+Attributes:   5
+              sepallength
+              sepalwidth
+              petallength
+              petalwidth
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+FilteredClassifier using weka.classifiers.rules.Prism  on data filtered through weka.filters.supervised.attribute.Discretize -R first-last -precision 6
+
+Filtered Header
+@relation iris-weka.filters.supervised.attribute.Discretize-Rfirst-last-precision6
+
+@attribute sepallength {'\'(-inf-5.55]\'','\'(5.55-6.15]\'','\'(6.15-inf)\''}
+@attribute sepalwidth {'\'(-inf-2.95]\'','\'(2.95-3.35]\'','\'(3.35-inf)\''}
+@attribute petallength {'\'(-inf-2.45]\'','\'(2.45-4.75]\'','\'(4.75-inf)\''}
+@attribute petalwidth {'\'(-inf-0.8]\'','\'(0.8-1.75]\'','\'(1.75-inf)\''}
+@attribute class {Iris-setosa,Iris-versicolor,Iris-virginica}
+
+@data
+
+
+Classifier Model
+Prism rules
+----------
+If petallength = '(-inf-2.45]' then Iris-setosa
+If petallength = '(2.45-4.75]'
+   and sepallength = '(5.55-6.15]' then Iris-versicolor
+If petallength = '(2.45-4.75]'
+   and sepallength = '(6.15-inf)' then Iris-versicolor
+If petallength = '(2.45-4.75]'
+   and sepalwidth = '(2.95-3.35]' then Iris-versicolor
+If petallength = '(2.45-4.75]'
+   and sepallength = '(-inf-5.55]'
+   and sepalwidth = '(-inf-2.95]'
+   and petalwidth = '(0.8-1.75]' then Iris-versicolor
+If petalwidth = '(0.8-1.75]'
+   and sepallength = '(6.15-inf)'
+   and petallength = '(4.75-inf)'
+   and sepalwidth = '(-inf-2.95]' then Iris-versicolor
+If petalwidth = '(0.8-1.75]'
+   and sepallength = '(6.15-inf)'
+   and sepalwidth = '(2.95-3.35]'
+   and petallength = '(4.75-inf)' then Iris-versicolor
+If petalwidth = '(0.8-1.75]'
+   and sepallength = '(5.55-6.15]'
+   and sepalwidth = '(-inf-2.95]'
+   and petallength = '(4.75-inf)' then Iris-versicolor
+If sepallength = '(5.55-6.15]'
+   and sepalwidth = '(2.95-3.35]'
+   and petallength = '(4.75-inf)'
+   and petalwidth = '(1.75-inf)' then Iris-versicolor
+If petalwidth = '(1.75-inf)'
+   and sepallength = '(6.15-inf)' then Iris-virginica
+If petalwidth = '(1.75-inf)'
+   and sepalwidth = '(-inf-2.95]' then Iris-virginica
+If petalwidth = '(1.75-inf)'
+   and sepallength = '(5.55-6.15]'
+   and sepalwidth = '(2.95-3.35]'
+   and petallength = '(4.75-inf)' then Iris-virginica
+If petallength = '(4.75-inf)'
+   and sepallength = '(5.55-6.15]'
+   and sepalwidth = '(-inf-2.95]'
+   and petalwidth = '(0.8-1.75]' then Iris-virginica
+If petallength = '(4.75-inf)'
+   and sepallength = '(6.15-inf)'
+   and petalwidth = '(0.8-1.75]'
+   and sepalwidth = '(-inf-2.95]' then Iris-virginica
+If petallength = '(4.75-inf)'
+   and sepallength = '(6.15-inf)'
+   and sepalwidth = '(2.95-3.35]'
+   and petalwidth = '(0.8-1.75]' then Iris-virginica
+If sepalwidth = '(-inf-2.95]'
+   and sepallength = '(-inf-5.55]'
+   and petallength = '(2.45-4.75]'
+   and petalwidth = '(0.8-1.75]' then Iris-virginica
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         129               86      %
+Incorrectly Classified Instances        17               11.3333 %
+Kappa statistic                          0.8253
+Mean absolute error                      0.0776
+Root mean squared error                  0.2786
+Relative absolute error                 17.9443 %
+Root relative squared error             59.907  %
+UnClassified Instances                   4                2.6667 %
+Total Number of Instances              150     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     Iris-setosa
+                 0.938    0.143    0.763      0.938    0.841      0.761    0.880     0.720     Iris-versicolor
+                 0.708    0.031    0.919      0.708    0.800      0.732    0.825     0.732     Iris-virginica
+Weighted Avg.    0.884    0.057    0.895      0.884    0.882      0.833    0.903     0.820     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 50  0  0 |  a = Iris-setosa
+  0 45  3 |  b = Iris-versicolor
+  0 14 34 |  c = Iris-virginica
+

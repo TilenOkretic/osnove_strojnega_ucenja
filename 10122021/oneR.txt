@@ -1,0 +1,66 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.FilteredClassifier -F "weka.filters.supervised.attribute.Discretize -R first-last -precision 6" -S 1 -W weka.classifiers.rules.OneR -- -B 6
+Relation:     iris
+Instances:    150
+Attributes:   5
+              sepallength
+              sepalwidth
+              petallength
+              petalwidth
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+FilteredClassifier using weka.classifiers.rules.OneR -B 6 on data filtered through weka.filters.supervised.attribute.Discretize -R first-last -precision 6
+
+Filtered Header
+@relation iris-weka.filters.supervised.attribute.Discretize-Rfirst-last-precision6
+
+@attribute sepallength {'\'(-inf-5.55]\'','\'(5.55-6.15]\'','\'(6.15-inf)\''}
+@attribute sepalwidth {'\'(-inf-2.95]\'','\'(2.95-3.35]\'','\'(3.35-inf)\''}
+@attribute petallength {'\'(-inf-2.45]\'','\'(2.45-4.75]\'','\'(4.75-inf)\''}
+@attribute petalwidth {'\'(-inf-0.8]\'','\'(0.8-1.75]\'','\'(1.75-inf)\''}
+@attribute class {Iris-setosa,Iris-versicolor,Iris-virginica}
+
+@data
+
+
+Classifier Model
+petalwidth:
+	'(-inf-0.8]'	-> Iris-setosa
+	'(0.8-1.75]'	-> Iris-versicolor
+	'(1.75-inf)'	-> Iris-virginica
+(144/150 instances correct)
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         139               92.6667 %
+Incorrectly Classified Instances        11                7.3333 %
+Kappa statistic                          0.89  
+Mean absolute error                      0.0489
+Root mean squared error                  0.2211
+Relative absolute error                 11      %
+Root relative squared error             46.9042 %
+Total Number of Instances              150     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     Iris-setosa
+                 0.880    0.050    0.898      0.880    0.889      0.834    0.915     0.830     Iris-versicolor
+                 0.900    0.060    0.882      0.900    0.891      0.836    0.920     0.827     Iris-virginica
+Weighted Avg.    0.927    0.037    0.927      0.927    0.927      0.890    0.945     0.886     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 50  0  0 |  a = Iris-setosa
+  0 44  6 |  b = Iris-versicolor
+  0  5 45 |  c = Iris-virginica
+
